@@ -1,0 +1,20 @@
+Install PostgreSQL 9.6 on Ubuntu 14.04 or 16.04 LTS
+
+http://devopspy.com/linux/install-postgresql-9-6-ubuntu-16-04-lts/   (REFERE WEBSITE)
+
+
+Step 1: Add Postgresql repository
+
+sudo add-apt-repository "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -sc)-pgdg main"
+
+wget -q -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+
+Step 2: Install Postgresql 9.6
+
+$ sudo apt-get update
+
+$ sudo apt-get install postgresql-9.6 postgresql-contrib
+
+Verification – Using psql shell (Optional)
+
+sudo -u postgres psql postgres
